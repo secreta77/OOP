@@ -1,0 +1,52 @@
+
+
+   body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.user-card {
+    width: 220px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.avatar-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px auto;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.status-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+
+.green { 
+    background-color: green; 
+}
+
+
+.red { 
+    background-color: red; 
+}

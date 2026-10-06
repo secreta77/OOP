@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>OOP, regex</title>
+</head>
+<body>
+
+    <div id="navBar-box"></div>
+  
+    <div id="user-box"></div>
+
+    <script type="module">
+        import { User, Navbar } from './script.js';
+
+     
+        const myNav = new Navbar('navy', 'center', 'navBar-box');
+        myNav.GetNavbar();
+
+        const myUser = new User(
+            'გიორგი ქოქაშვილი', 
+            'qoqashviligiorgi7@gmail.com', 
+            'https://thumbs.dreamstime.com/b/user-profile-line-icon-web-avatar-employee-symbol-sign-illustration-design-isolated-white-background-192379539.jpg'
+        );
+
+        const userContainer = document.getElementById('user-box');
+
+
+        const dotColor = myUser.loggedIn() ? 'green' : 'red';
+
+        userContainer.innerHTML = `
+            <div class="user-card">
+                <div class="avatar-container">
+                    <img class="avatar-img" src="${myUser.avatar}" alt="Avatar">
+                    <div class="status-dot ${dotColor}"></div>
+                </div>
+                <h3>${myUser.name}</h3>
+                <p>${myUser.email}</p>
+                <p><strong>როლი:</strong> ${myUser.Role()}</p>
+            </div>
+        `;
+    </script>
+</body>
+</html>
